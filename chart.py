@@ -13,7 +13,7 @@ class MalodyChart:
             content = f.read().strip()
         self.malody_chart = json.loads(content)
         if self.malody_chart['meta']['mode'] != 0:
-            raise RuntimeError(str(mc_filepath) + ' is not a keyboard map.')
+            raise RuntimeError(str(mc_filepath) + ' is not a keyboard chart.')
         self.col_count = int(self.malody_chart['meta']['mode_ext']['column'])
 
     @staticmethod
